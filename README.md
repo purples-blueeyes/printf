@@ -1,1 +1,1 @@
-A collaborative team project with Ato Ishaque on the print fumction printf in C
+A collaborative team project with Ato Ishaque on the print function printf in C
