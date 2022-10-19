@@ -16,7 +16,6 @@ int _printf(const char *format, ...)
 	params_t params = PARAMS_INIT;
 
 	va_start(list, format);
-
 	/* checking for NULL char */
 	if (!format || (format[0] == '%' && !format[1]))
 		return (-1);
@@ -25,17 +24,14 @@ int _printf(const char *format, ...)
 	for (k = (char *)format; *k; k++)
 	{
 		init_params(&params, list);
-
 		/*checking for the % specifier*/
 		if (*k != '%')
 		{
 			sum += _putchar(*k);
 			continue;
 		}
-
 		start = k;
 			k++;
-			/* while char at k is flag character */
 			while (get_flag(k, &params))
 			{
 				k++;
